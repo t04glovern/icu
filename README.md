@@ -3,6 +3,7 @@
 Collection of tools, guides and examples that I use in my everyday for penetration testing
 
 ### Information Gathering
+------
 
 #### Port & Service Scanning
 
@@ -11,10 +12,12 @@ Collection of tools, guides and examples that I use in my everyday for penetrati
 [Web Based Tools](tools/webtools/README.md)
 
 ### Sniffing & Spoofing
+------
 
 [Scapy](tools/scapy/README.md)
 
 ### Community Lists
+------
 
 [OSCP Survival Guide](cheatsheets/oscp/README.md)
 

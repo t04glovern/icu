@@ -2,6 +2,13 @@
 
 Collection of tools, guides and examples that I use in my everyday for penetration testing
 
+### Quick Lists
+------
+
+* [Common Ports](cheatsheets/misc/common-ports.pdf)
+
+* [Complete Port List](cheatsheets/misc/PORTLIST.md)
+
 ### Information Gathering
 ------
 

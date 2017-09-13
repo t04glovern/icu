@@ -1,8 +1,8 @@
-## NMAP
+## Netcat
 
 #### Useful Links
 
-[OSCP Survival Guide - port-scanning](https://github.com/frizb/OSCP-Survival-Guide#port-scanning)
+[Linux Reverse Shells](https://www.lanmaster53.com/2011/05/27/7-linux-shells-using-built-in-tools/)
 
 #### Read and write TCP and UDP Packets
 

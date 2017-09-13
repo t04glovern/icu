@@ -14,6 +14,12 @@ Collection of tools, guides and examples that I use in my everyday for penetrati
 
 [ssllabs](https://www.ssllabs.com/ssltest/index.html) - SSL Server Test
 
-### Tools
+### Information Gathering
 
-[Scapy](tools/scapy)
+#### Port Scanning
+
+[NMAP](tools/nmap/README.md)
+
+### Sniffing & Spoofing
+
+[Scapy](tools/scapy/README.md)

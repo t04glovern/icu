@@ -10,14 +10,14 @@ if __name__ == "__main__":
     dst_port = 80
 
     # Construct the packet
-    mypac = IP(src=src_ip, dst=dst_ip) / TCP(sport=src_port, dport=dst_port)
+    packet = IP(src=src_ip, dst=dst_ip) / TCP(sport=src_port, dport=dst_port)
 
     # View the packet description
     print("Packet (display): ")
-    mypac.display()
+    packet.display()
 
     print("Packet (summary): ")
-    mypac.summary
+    packet.summary
 
     # Send the packet
-    send(mypac)
+    send(packet)

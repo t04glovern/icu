@@ -5,21 +5,22 @@ from scapy.all import *
 if __name__ == "__main__":
 
     # Packet config
-    dst_ip = '8.8.8.8'
-    dst_addr = 'www.yahoo.com'
+    src_ip = '10.37.129.3'
+    dst_ip = '10.37.129.4'
+    dports = [22,80,88,145,443,1433,3389]
 
     # Packet with SYN flag
-    mypac = IP(dst=dst_ip) / UDP(dport=53) / DNS(rd=1, qd=DNSQR(qname=dst_addr))
+    packet = IP(dst=dst_ip) / TCP(sport=53,dport=dports, flags="S")
 
     # View the packet description
     print("Packet (display): ")
-    mypac.display()
+    packet.display()
 
     print("Packet (summary): ")
-    mypac.summary()
+    packet.summary()
 
     # Send the packet
-    ans, unans = sr(mypac)
+    ans, unans = sr(packet)
 
     # Details on answered packets
     print("Packets (answered): \n")

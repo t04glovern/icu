@@ -10,14 +10,14 @@ if __name__ == "__main__":
     payload = "My Message"
 
     # Whatever you 'name' it is its name.
-    mypac = IP(dst=dst_ip) / payload / ICMP()
+    packet = IP(dst=dst_ip) / payload / ICMP()
 
     # View the packet description
     print("Packet (display): ")
-    mypac.display()
+    packet.display()
 
     print("Packet (summary): ")
-    mypac.summary()
+    packet.summary()
 
     # Send the packet
-    send(mypac)
+    send(packet)

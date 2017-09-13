@@ -9,22 +9,22 @@ if __name__ == "__main__":
     dst_ip = '10.37.129.4'
     ports = [80,88,443]
 
-    mypac = IP(dst=dst_ip) / TCP(dport=ports)
+    packet = IP(dst=dst_ip) / TCP(dport=ports)
 
     # View the packet description
     print("Packet (display): \n")
-    mypac.display()
+    packet.display()
 
     print("Packet (summary): \n")
-    mypac.summary()
+    packet.summary()
 
     # Send the packet
-    ans, unans = sr(mypac)
+    ans, unans = sr(packet)
 
     # Details on answered packets
     print("Packets (answered): \n")
-    ans.summary()
+    packet.summary()
 
     # Details on unanswered packets
     print("Packets (unanswered): \n")
-    unans.summary()
+    packet.summary()

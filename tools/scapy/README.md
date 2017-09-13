@@ -94,10 +94,10 @@ packet = IP(dst=dst_ip) / UDP(dport=53) / DNS(rd=1, qd=DNSQR(qname=dst_addr))
 ans, unans = sr(packet)
 
 # View outcome
-$ unans.summary
-  <bound method PacketList.summary of <Unanswered: TCP:0 UDP:0 ICMP:0 Other:0>>
-$ ans.summary
-  <bound method SndRcvList.summary of <Results: TCP:0 UDP:1 ICMP:0 Other:0>>
+unans.summary
+<bound method PacketList.summary of <Unanswered: TCP:0 UDP:0 ICMP:0 Other:0>>
+ans.summary
+<bound method SndRcvList.summary of <Results: TCP:0 UDP:1 ICMP:0 Other:0>>
 ```
 
 ##### Editing Packet

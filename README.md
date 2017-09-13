@@ -13,3 +13,9 @@ Collection of tools, guides and examples that I use in my everyday for penetrati
 ### Sniffing & Spoofing
 
 [Scapy](tools/scapy/README.md)
+
+### Community Lists
+
+[OSCP Survival Guide](cheatsheets/oscp/README.md)
+
+[OSCP Helpful Links](cheatsheets/oscp/README_LINKS.md)

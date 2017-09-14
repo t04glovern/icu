@@ -29,6 +29,11 @@ $ nmap -oN nmap_$vm1.txt -v -sU -sS -p- -A -T4 $vm1
 $ nmap -oN nmap_$vm2.txt -v -sU -sS -p- -A -T4 $vm2
 $ nmap -oN nmap_$vm3.txt -v -sU -sS -p- -A -T4 $vm3
 
+# Very Fast common port scanner with Netcat
+$ netcat -v -z -n -w 1 $vm1 1-1023 > nc_fast_$vm1.txt 2>&1
+$ netcat -v -z -n -w 1 $vm2 1-1023 > nc_fast_$vm2.txt 2>&1
+$ netcat -v -z -n -w 1 $vm3 1-1023 > nc_fast_$vm3.txt 2>&1
+
 # Quick TCP Enumeration with a Banner grab out to file
 $ nmap -oN nmap_banner_$vm1 -sV -sT -p 1-65535 -A -T4 $vm1
 $ nmap -oN nmap_banner_$vm2 -sV -sT -p 1-65535 -A -T4 $vm2

@@ -4,6 +4,11 @@
 
 [Linux Reverse Shells](https://www.lanmaster53.com/2011/05/27/7-linux-shells-using-built-in-tools/)
 
+#### Quick Scans
+
+###### Really fast scanner with 1 timeout value
+`netcat -v -z -n -w 1 10.37.129.4 1-1023`
+
 #### Read and write TCP and UDP Packets
 
 ##### Connect to a POP3 mail server  

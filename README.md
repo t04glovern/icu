@@ -68,6 +68,11 @@ $ nmap -oN nmap_banner_$vm3 -sV -sT -p 1-65535 -A -T4 $vm3
 
 * [OSCP Helpful Links](cheatsheets/oscp/README_LINKS.md)
 
+#### Links
+------
+
+* [Document Metadata Extraction](http://www.forensicswiki.org/wiki/Document_Metadata_Extraction)
+
 #### Just for Fun
 
 * [Awesome CTF](https://github.com/apsdehal/awesome-ctf)

@@ -114,6 +114,7 @@ eight(){
 
 	echo "HTTP username enumeration"
 	nohup nmap -sV --script=http-userdir-enum $ipaddr -oN ~/nmap_http_usernames_script_$ipaddr.txt 1> nohup8b.out &
+	pause
 }
  
 # function to display menus

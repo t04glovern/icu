@@ -1,6 +1,3 @@
-## NMAP Scans with user interface
-
-```
 #!/bin/bash
 # A menu driven shell script sample template 
 ## ----------------------------------
@@ -159,4 +156,3 @@ do
 	show_menus
 	read_options
 done
-```

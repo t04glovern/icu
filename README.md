@@ -38,6 +38,11 @@ $ netcat -v -z -n -w 1 $vm3 1-1023 > nc_fast_$vm3.txt 2>&1
 $ nmap -oN nmap_banner_$vm1 -sV -sT -p 1-65535 -A -T4 $vm1
 $ nmap -oN nmap_banner_$vm2 -sV -sT -p 1-65535 -A -T4 $vm2
 $ nmap -oN nmap_banner_$vm3 -sV -sT -p 1-65535 -A -T4 $vm3
+
+# Active NMAP out to file
+$ nmap -oN nmap_active_connect_$vm1 -p1-65535 -A -T5 -sT $vm1
+$ nmap -oN nmap_active_connect_$vm2 -p1-65535 -A -T5 -sT $vm2
+$ nmap -oN nmap_active_connect_$vm3 -p1-65535 -A -T5 -sT $vm3
 ```
 
 ### Quick Lists

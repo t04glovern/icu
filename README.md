@@ -44,9 +44,15 @@ $ nmap -oN nmap_banner_$vm1 -sV -sT -p 1-65535 -A -T4 $vm1
 $ nmap -oN nmap_banner_$vm2 -sV -sT -p 1-65535 -A -T4 $vm2
 $ nmap -oN nmap_banner_$vm3 -sV -sT -p 1-65535 -A -T4 $vm3
 
+# Active NMAP out to file
+$ nmap -oN nmap_active_connect_$vm1 -p1-65535 -A -T5 -sT $vm1
+$ nmap -oN nmap_active_connect_$vm2 -p1-65535 -A -T5 -sT $vm2
+$ nmap -oN nmap_active_connect_$vm3 -p1-65535 -A -T5 -sT $vm3
+
 # Pull down linuxprivchecker.py and run
 $ wget <url to script goes here>/linuxprivchecker.py
 $ python linuxprivchecker.py > linux_priv_check.txt
+
 ```
 
 ### Quick Lists

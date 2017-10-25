@@ -20,39 +20,26 @@ $ arp-scan $vm0/24
 
 # Add VM's to system variables list for easier referencing
 $ export vm1=xxx.xxx.xxx.xxx
-$ export vm2=xxx.xxx.xxx.xxx
-$ export vm3=xxx.xxx.xxx.xxx
 
 # Enumeration Scan All Ports TCP / UDP and output to file
 # WARNING - this is a long scan, kick it off early
 $ nmap -oN nmap_$vm1.txt -v -sU -sS -p- -A -T4 $vm1
-$ nmap -oN nmap_$vm2.txt -v -sU -sS -p- -A -T4 $vm2
-$ nmap -oN nmap_$vm3.txt -v -sU -sS -p- -A -T4 $vm3
 
 # Intense Scan ALL TCP Ports
 $ nmap -oN nmap_tcp_$vm1.txt -v -p 1-65535 -A -T4 $vm1
-$ nmap -oN nmap_tcp_$vm2.txt -v -p 1-65535 -A -T4 $vm2
-$ nmap -oN nmap_tcp_$vm3.txt -v -p 1-65535 -A -T4 $vm3
 
 # Very Fast common port scanner with Netcat
 $ netcat -v -z -n -w 1 $vm1 1-1023 > nc_fast_$vm1.txt 2>&1
-$ netcat -v -z -n -w 1 $vm2 1-1023 > nc_fast_$vm2.txt 2>&1
-$ netcat -v -z -n -w 1 $vm3 1-1023 > nc_fast_$vm3.txt 2>&1
 
 # Quick TCP Enumeration with a Banner grab out to file
 $ nmap -oN nmap_banner_$vm1 -sV -sT -p 1-65535 -A -T4 $vm1
-$ nmap -oN nmap_banner_$vm2 -sV -sT -p 1-65535 -A -T4 $vm2
-$ nmap -oN nmap_banner_$vm3 -sV -sT -p 1-65535 -A -T4 $vm3
 
 # Active NMAP out to file
 $ nmap -oN nmap_active_connect_$vm1 -p1-65535 -A -T5 -sT $vm1
-$ nmap -oN nmap_active_connect_$vm2 -p1-65535 -A -T5 -sT $vm2
-$ nmap -oN nmap_active_connect_$vm3 -p1-65535 -A -T5 -sT $vm3
 
 # Pull down linuxprivchecker.py and run
 $ wget https://raw.githubusercontent.com/t04glovern/icu/master/tools/linuxprivchecker.py
 $ python linuxprivchecker.py > linux_priv_check.txt
-
 ```
 
 ### Quick Lists

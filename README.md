@@ -50,7 +50,7 @@ $ nmap -oN nmap_active_connect_$vm2 -p1-65535 -A -T5 -sT $vm2
 $ nmap -oN nmap_active_connect_$vm3 -p1-65535 -A -T5 -sT $vm3
 
 # Pull down linuxprivchecker.py and run
-$ wget <url to script goes here>/linuxprivchecker.py
+$ wget https://raw.githubusercontent.com/t04glovern/icu/master/tools/linuxprivchecker.py
 $ python linuxprivchecker.py > linux_priv_check.txt
 
 ```

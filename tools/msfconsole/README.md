@@ -45,3 +45,9 @@ msv | Attempt to retrieve msv creds (hashes)
 ssp | Attempt to retrieve ssp creds
 tspkg | Attempt to retrieve tspkg creds
 wdigest | Attempt to retrieve wdigest creds
+
+##### Extras
+
+`when in meterpreter: ls, pwd, whoami, get system, get admin`
+
+`lsadump::sam, privilege::debug. token::whoami, token::elevate, process::list`

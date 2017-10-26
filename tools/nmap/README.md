@@ -9,8 +9,12 @@
 ##### List all available scripts
 `locate nse | grep scripts`
 
-##### Enumerate SMB users
+##### Enumerate SMB
 `nmap -oN nmap_vuln_scan_$ip -Pn --script smb-enum-users.nse $ip`
+
+`nmap -oN nmap_vuln_scan_$ip -Pn --script smb-enum-shares.nse $ip`
+
+`nmap -oN nmap_vuln_scan_$ip -Pn --script smb-enum-services.nse $ip`
 
 ##### Subnet Reference Table
 

@@ -75,6 +75,8 @@ $ python linuxprivchecker.py > linux_priv_check.txt
 
 * [Document Metadata Extraction](http://www.forensicswiki.org/wiki/Document_Metadata_Extraction)
 
+* [Password Brute Forcing](https://blog.g0tmi1k.com/dvwa/bruteforce-low/#Usernames..amp..Wordlists)
+
 #### Just for Fun
 
 * [Awesome CTF](https://github.com/apsdehal/awesome-ctf)

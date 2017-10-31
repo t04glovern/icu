@@ -16,17 +16,10 @@ Collection of tools, guides and examples that I use in my everyday for penetrati
 $ export vm0=xxx.xxx.xxx.xxx
 
 # Find other machines quickly
-$ arp-scan $vm0/24
+$ arp-scan xxx.xxx.xxx.0/24
 
 # Add VM's to system variables list for easier referencing
 $ export vm1=xxx.xxx.xxx.xxx
-
-# Enumeration Scan All Ports TCP / UDP and output to file
-# WARNING - this is a long scan, kick it off early
-$ nmap -oN nmap_$vm1.txt -v -sU -sS -p- -A -T4 $vm1
-
-# Intense Scan ALL TCP Ports
-$ nmap -oN nmap_tcp_$vm1.txt -v -p 1-65535 -A -T4 $vm1
 
 # Very Fast common port scanner with Netcat
 $ netcat -v -z -n -w 1 $vm1 1-1023 > nc_fast_$vm1.txt 2>&1
@@ -37,9 +30,9 @@ $ nmap -oN nmap_banner_$vm1 -sV -sT -p 1-65535 -A -T4 $vm1
 # Active NMAP out to file
 $ nmap -oN nmap_active_connect_$vm1 -p1-65535 -A -T5 -sT $vm1
 
-# Pull down linuxprivchecker.py and run
-$ wget https://raw.githubusercontent.com/t04glovern/icu/master/tools/linuxprivchecker.py
-$ python linuxprivchecker.py > linux_priv_check.txt
+# dirb scan output to file and grep the interesting items (Code 200's)
+dirb http://$vm1 -o dirb_scan_$vm1.txt
+cat dirb_scan_$vm1.txt | grep CODE:200 > dirb_scan_filtered_$vm1.txt
 ```
 
 ### Quick Lists

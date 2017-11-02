@@ -85,3 +85,10 @@ nslookup -q=TXT site.domain.com
 
 ##### SMB share connect via web browser
 `smb://10.37.129.11/<sharename>/`
+
+##### Windows related enum
+```bash
+net users
+net localgroup Administrators
+lusrmgr.msc
+```

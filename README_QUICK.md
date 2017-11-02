@@ -62,6 +62,9 @@ $ wget https://raw.githubusercontent.com/t04glovern/icu/master/tools/linuxprivch
 $ python linuxprivchecker.py > linux_priv_check.txt
 ```
 
+##### enum4linux ALL option
+`enum4linux -a 10.37.129.11`
+
 ##### gzip extract
 `tar -xzvf file.tar.gz`
 

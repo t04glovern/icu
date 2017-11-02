@@ -5,6 +5,12 @@ Collection of tools, guides and examples that I use in my everyday for penetrati
 ### Setup Tips
 ------
 
+### Good Sites
+
+* [Local Linux Enumeration & Privilege Escalation Cheatsheet](https://www.rebootuser.com/?p=1623)
+
+* [Command Line Cheat Sheet for Administration and Networking and Hotkeys](http://www.kossboss.com/?p=617)
+
 ```bash
 #!/bin/bash
 

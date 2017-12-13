@@ -86,6 +86,18 @@ $ python linuxprivchecker.py > linux_priv_check.txt
 ##### gzip extract
 `tar -xzvf file.tar.gz`
 
+##### wfuzz
+`wfuzz -c -z file,/usr/share/wordlists/wfuzz/general/big.txt --hc 404 http://10.37.129.11/FUZZ.php`
+
+##### curl download and use cookie
+```
+## Download
+curl -L -v http://10.37.129.11/index.php -c cookies -b cookies
+
+## Use
+curl -v http://10.37.129.11/index.php -c cookies -b cookies
+```
+
 ##### DNS quert using nslookup
 ```bash
 ## Any records

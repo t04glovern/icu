@@ -37,9 +37,9 @@ $ nmap -oN nmap_banner_$vm1.txt -sV -sT -p 1-65535 -A -T4 $vm1
 $ nmap -oN nmap_active_connect_$vm1.txt -p1-65535 -A -T5 -sT $vm1
 
 # dirb scan output to file and grep the interesting items (Code 200's)
-dirb http://$vm1 -o dirb_scan_$vm1.txt
-cat dirb_scan_$vm1.txt | grep CODE:200 > dirb_scan_200_filtered_$vm1.txt
-cat dirb_scan_$vm1.txt | grep CODE: | grep -v SIZE:0 > dirb_scan_filtered_$vm1.txt
+$ dirb http://$vm1 -o dirb_scan_$vm1.txt
+$ cat dirb_scan_$vm1.txt | grep CODE:200 > dirb_scan_200_filtered_$vm1.txt
+$ cat dirb_scan_$vm1.txt | grep CODE: | grep -v SIZE:0 > dirb_scan_filtered_$vm1.txt
 ```
 
 ### Quick Lists
